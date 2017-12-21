@@ -11,7 +11,7 @@ readme = "README.md"
 version = "0.2.0"
 
 [dependencies]
-capstone-sys = "0.6.0"
+capstone-sys = { path = "../capstone-sys" }
 
 # Not actually a dependency, but this makes the more complicated examples work
 [dev-dependencies]
