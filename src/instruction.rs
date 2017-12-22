@@ -177,6 +177,12 @@ impl<'a> Detail<'a> {
     pub fn groups_count(&self) -> u8 {
         (*self.0).groups_count
     }
+
+    /// Returns the architecture-specific instruction info
+    /// NOTE: ARM64 only
+    pub unsafe fn inst_info_arm64(&self) -> cs_arm64 {
+        (*self.0).__bindgen_anon_1.arm64
+    }
 }
 
 impl<'a> Debug for Detail<'a> {
