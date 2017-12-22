@@ -344,7 +344,7 @@ impl Capstone {
     /// 1. Instruction was created with detail enabled
     /// 2. Skipdata is disabled
     /// 3. Capstone was not compiled in diet mode
-    fn insn_detail<'s, 'i: 's>(&'s self, insn: &'i Insn) -> CsResult<Detail<'i>> {
+    pub fn insn_detail<'s, 'i: 's>(&'s self, insn: &'i Insn) -> CsResult<Detail<'i>> {
         if !self.detail_enabled {
             Err(Error::Capstone(CapstoneError::DetailOff))
         } else if insn.id() == 0 {
